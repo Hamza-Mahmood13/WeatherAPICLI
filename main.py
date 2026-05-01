@@ -91,11 +91,13 @@ def main():
         temperature = current_weather.get("temperature")
         weather_code = current_weather.get("weathercode")
         description = describe_weather(weather_code)
+        wind_speed = current_weather.get("windspeed")
 
         print("Current weather: ")
         print(f"Location: {name}, {country}")
-        print(f"Temperature: {temperature}")
+        print(f"Temperature: {temperature}°C")
         print(f"Conditions: {description}")
+        print(f"Wind speed: {wind_speed} km/h")
 
         again = input("\nSearch again? (y/n): ").strip().lower()
 
